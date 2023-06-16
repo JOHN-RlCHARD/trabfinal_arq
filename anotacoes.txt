@@ -1,0 +1,16 @@
+class Livro:
+    faltando definicao dos tipos dos parametros.
+
+class Usuario:
+    emprestar_livro(): expressoes condicionais repetidas. 2 "if"'s desnecessarios.
+    devolver_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
+    remover metodos de empresatar e devolver do Usuario, deixar que a biblioteca cuide disso.
+
+class Biblioteca:
+    transformada em Singleton
+    reformatado funcoes de adicionar livros e usuarios.
+    remover_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
+    buscar_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
+
+Codigo principal:
+    Removida funcoes de adicionar a biblioteca, ao criar um Livro ou Usuario, sao automaticamente adicionados ao singleton.

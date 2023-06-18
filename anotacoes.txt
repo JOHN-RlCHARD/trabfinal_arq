@@ -1,16 +1,33 @@
+Alunos
+João Ricardo Alvarenga Ensenat - 21980446
+Tobias Tassinari Dornelles - 17270612
+
+Problemas:
+
 class Livro:
     faltando definicao dos tipos dos parametros.
 
 class Usuario:
     emprestar_livro(): expressoes condicionais repetidas. 2 "if"'s desnecessarios.
     devolver_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
-    remover metodos de empresatar e devolver do Usuario, deixar que a biblioteca cuide disso.
+    Lógica de empréstimo não deveria estar dentro dessa classe pois viola o princípio open closed.
+
+class Biblioteca:
+    remover_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
+    buscar_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
+
+Sugestões:
+
+class Livro:
+    remover metodos de emprestar e devolver do Usuario, deixar que a biblioteca cuide disso.
+
+class Usuario: 
+    Passar a lógica dos métodos para a classe Biblioteca e deixar apenas funções com a ação final a ser tomada caso passe nas validações.
 
 class Biblioteca:
     transformada em Singleton
     reformatado funcoes de adicionar livros e usuarios.
-    remover_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
-    buscar_livro(): expressoes condicionais repetidas. 1 "if" desnecessario.
+    Fica responsável pela lógica de empréstimos.
 
 Codigo principal:
-    Removida funcoes de adicionar a biblioteca, ao criar um Livro ou Usuario, sao automaticamente adicionados ao singleton.
+    Remover funcoes de adicionar a biblioteca, ao criar um Livro ou Usuario, sao automaticamente adicionados ao singleton.
